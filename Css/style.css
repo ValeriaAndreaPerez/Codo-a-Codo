@@ -8,31 +8,87 @@ html{
 }
 
 body, header, main, footer {
-    border: 3px red solid;
-    min-height: 50px;
+    /*border: 3px red solid;*/
+    min-height: 40px;
     margin: 0.5rem;
-    min-width: 400px;
+    min-width: 200px;
+}
+header, footer {
+    background-color: #b6d8c0;
+    font-family: 'Kaisei HarunoUmi', serif;
+    box-shadow: 0 0 0 0.5rem rgba(165, 160, 159, 0.5)
+}
+
+.header-logo {
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.header-menubar {
+    /*border: solid turquoise;*/
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0 0 0.5rem 0;
+}
+
+.header-menubar ul { 
+    list-style: none;
+}
+.header-menubar li {
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 50px 0;
+    padding: 50px;
 }
 main {
+    background-color: #ffff;
     min-height: 200px;
+    overflow: auto;
 }
 main>div {
-    border: 3px blue solid;
+    /*border: 3px blue solid;*/
     min-height: 180px;
     margin: 0.5rem;
+    height: auto;
+    float: left;
+    width: 65%;
 }
 main>aside {
-    border: 3px yellow solid;
+    /*border: 3px yellow solid;*/
     min-height: 180px;
     margin: 0.5rem;
+    min-width: 25%;
+    float: left;
+    width: auto;
 
 }
 .secciones {
-    border: 2px green solid;
+    /*border: 2px green solid;*/
     min-height: 50px;
     margin: 0.5rem;
 }
 .secciones article {
-    border: 2px purple solid;
+    /*border: 2px purple solid;*/
     margin: 0.5rem;
+    font-family:'Gowun Dodum', sans-serif;
 }
+
+body {
+    background-color: #dadabd;
+}
+#aceite {
+    width: 100%;
+}
+#relajada {
+    width: 100%;
+}
+/*color1 { #b6d8c0 };
+.color2 { #c8d9bf };
+.color3 { #dadabd };
+.color4 { #ecdbbc };
+.color5 { #fedcba }  #DA8;*/

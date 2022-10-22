@@ -11,7 +11,7 @@ body, header, main, footer {
     /*border: 3px red solid;*/
     min-height: 40px;
     margin: 0.5rem;
-    min-width: 200px;
+    min-width: 50px;
 }
 header, footer {
     background-color: #b6d8c0;
@@ -20,19 +20,19 @@ header, footer {
 }
 
 .header-logo {
-    width: auto;
-    display: inline-block;
+    /*border: 3px black solid;*/
     margin: 0.5rem;
+    display: inline-block;
 }
 
 .header-menubar {
+    margin: 0.5rem 0 0.5rem 0;
     /*border: solid turquoise;*/
-    left: auto;
+    left: 10px;
     position: relative;
     top: auto;
     width: auto;
     display: inline-block;
-    margin: 0 0 0.5rem 0;
 }
 
 .header-menubar ul { 
@@ -40,10 +40,18 @@ header, footer {
 }
 .header-menubar li {
     float: left;
+    font-size: 17px;;
     font-weight: 700;
-    text-align: center;
-    margin: 0 50px 0;
-    padding: 50px;
+    text-align: left;
+    margin: 0 10px 15px 150px;
+    padding: 0;
+}
+.header-menubar a {
+    text-decoration: none;
+    color: black
+}
+.header-menubar a:hover {
+    color: #DA8 
 }
 main {
     background-color: #ffff;
@@ -76,6 +84,7 @@ main>aside {
     /*border: 2px purple solid;*/
     margin: 0.5rem;
     font-family:'Gowun Dodum', sans-serif;
+    text-align: justify;
 }
 
 body {

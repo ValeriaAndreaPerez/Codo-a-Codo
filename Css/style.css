@@ -87,13 +87,15 @@ main>div {
     width: 65%;
 }
 main>aside {
-    /*border: 3px yellow solid;*/
+    border: 3px yellow solid;
     min-height: 180px;
     margin: 0.5rem;
     min-width: 25%;
     float: left;
     width: auto;
-
+    margin-top: 138px;
+    font-family: 'Gowun Dodum', sans-serif;
+    text-align: center;
 }
 .secciones {
     /*border: 2px green solid;*/

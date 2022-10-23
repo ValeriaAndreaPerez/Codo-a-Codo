@@ -5,23 +5,43 @@
 html{
     font-size: 1rem;
     height: 100%;
+    width: 100%;
 }
 
-body, header, main, footer {
+body, main {
     /*border: 3px red solid;*/
-    min-height: 40px;
-    margin: 0.5rem;
+    min-height: 50px;
+    margin: 0;
     min-width: 50px;
+    padding: 0;
 }
-header, footer {
+header {
+    position: fixed;
+    width: 100%;
     background-color: #b6d8c0;
     font-family: 'Kaisei HarunoUmi', serif;
-    box-shadow: 0 0 0 0.5rem rgba(165, 160, 159, 0.5)
+    box-shadow: 0 0 0 0 #b6d8c0 100%
 }
-
+ footer {
+    /*border: 3px blue solid;*/
+    text-align: center;
+    width: 100%;
+    background-color: #b6d8c0;
+    font-family: 'Kaisei HarunoUmi', serif;
+    box-shadow: 0 0 0 0 #b6d8c0 100%;
+    display: inline-block;
+    font-style: italic;
+    font-size: small;
+}
+.pie{
+    font-size: larger;
+    font-style: italic;
+    text-align: center;
+    display: inline-block;
+}
 .header-logo {
     /*border: 3px black solid;*/
-    margin: 0.5rem;
+    /*margin: 0.5rem;*/
     display: inline-block;
 }
 
@@ -79,10 +99,12 @@ main>aside {
     /*border: 2px green solid;*/
     min-height: 50px;
     margin: 0.5rem;
+    top:10px
 }
 .secciones article {
     /*border: 2px purple solid;*/
-    margin: 0.5rem;
+    /*margin: 0.5rem;*/
+    margin-top: 100px;
     font-family:'Gowun Dodum', sans-serif;
     text-align: justify;
 }
@@ -95,6 +117,12 @@ body {
 }
 #relajada {
     width: 100%;
+}
+.lista-aceite ul {
+    align-items:flex-start;
+}
+.lista-aceite li {
+    list-style-type:disc;
 }
 /*color1 { #b6d8c0 };
 .color2 { #c8d9bf };

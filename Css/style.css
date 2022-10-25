@@ -22,6 +22,7 @@ header {
     font-family: 'Kaisei HarunoUmi', serif;
     box-shadow: 5px 5px 20px #b6d8c0 ;
     border-radius: 3px;
+    display: flex;
 }
  footer {
     /*border: 3px blue solid;*/
@@ -45,7 +46,6 @@ header {
     /*border: 3px black solid;*/
     /*margin: 0.5rem;*/
     display: inline-flex;
-    z-index: 10;
 }
 #menu ,  #menu-check {
     display: none;
@@ -57,7 +57,7 @@ header {
     }
     .header-menubar ul li{
     width: 100%;
-    text-align: center;
+    align-items: center;
     display:inline-flex;
      }
     #menu {
@@ -121,7 +121,6 @@ header {
     }
 }
 
-
 .header-menubar {
     margin: 0 0 0 0;
     /*border: solid turquoise;*/
@@ -129,22 +128,23 @@ header {
     position: relative;
     top: auto;
     width: auto;
-    display: inline-flex;
+    display: inline;
 }
 
 .header-menubar ul li { 
     display: inline-flex;
-    text-align:justify;
+    /*text-align:right;*/
     list-style: none;
 }
 .header-menubar li {
     /*border:3px green solid;*/
-    float:inline-start;
-    font-size: 20px;;
+    float:inline;
+    font-size: 18px;;
     font-weight: 700;
-    text-align: right;
-    margin: 20px 90px 0px 0px;
+    /*text-align: center;*/
+    margin: 20px 100px 0px 0px;
     padding: 0;
+    align-items: center;
 }
 .header-menubar a {
     text-decoration: none;

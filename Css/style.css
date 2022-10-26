@@ -65,7 +65,7 @@ header {
     }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:700px) {
     
     .header-logo {
         margin: 0;
@@ -95,6 +95,9 @@ header {
     }
     #menu-cerrar {
             display: none;
+        }
+    #menu-abrir {
+        display: block;
     }
     #menu-check:checked ~ label #menu-abrir {
     display: none;
@@ -116,8 +119,9 @@ header {
         list-style: none;
         font-size: small;
     }
-    main {
-        text-align: center;
+    main>div {
+        display: block;
+        width: 100%;
     }
 }
 
@@ -163,7 +167,7 @@ main>div {
     min-height: 180px;
     margin: 0.5rem;
     height: auto;
-    float: left;
+    float: right;
     width: 65%;
 }
 main>aside {

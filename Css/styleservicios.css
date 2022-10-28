@@ -22,13 +22,12 @@ header {
     font-family: 'Kaisei HarunoUmi', serif;
     box-shadow: 5px 5px 20px #b6d8c0 ;
     border-radius: 3px;
-    display:flex;
 }
 .container {
     display:flex;
-    flex-direction:row;
-    justify-content: space-between;
+    place-content: space-between;
 }
+
 
 footer {
     /*border: 3px blue solid;*/
@@ -50,22 +49,25 @@ footer {
 }
 .header-logo {
     /*border: 3px black solid;*/
-    /*margin: 0.5rem;*/
-    display: inline-flex;
+    margin: 0;
+    padding:0;
+}
+.header-logo a {
+    padding: 0;
 }
 #menu , #menu-check {
     display: none;
 }
 
-@media only screen and (max-widht:900px) {
+@media only screen and (max-widht:1000px) {
     header, .header-menubar,.header-menubar ul, .header-menubar li {
-        display:inline-block
+        display:flex;
     }
-    .header-menubar ul li{
-    width: 100%;
-    align-items: center;
-    display:inline-flex;
-     }
+    header div.container nav {
+        display: flex;
+        place-content: space-between;
+    }
+   
     #menu {
         display: none;
     }
@@ -75,16 +77,18 @@ footer {
     
     .header-logo {
         margin: 0;
+    }
+    .header-logo a {
         padding: 0;
     }
     .header-menubar {
         display: block;
         place-content: space-between;
     }
-    #menu-check:not(:checked) ~ .header-menubar {
+    #menu-check:not(:checked) ~ nav {
         display: none;
     } 
-    #menu-check:checked ~ .header-menubar {
+    #menu-check:checked ~ nav {
         display: block;
     }
     #menu {
@@ -95,6 +99,7 @@ footer {
             position: absolute;
             top: 0.5em;
             right: 0.5em;
+            z-index: 9999;
         }
     #menu:hover {
             color: black;
@@ -102,35 +107,32 @@ footer {
     #menu-cerrar {
             display: none;
         }
-    #menu-abrir {
-        display: block;
-    }
     #menu-check:checked ~ label #menu-abrir {
     display: none;
     }
     #menu-check:checked ~ label #menu-cerrar {
     display: block
     }
-    .header-menubar {
-        position: absolute;
+    /*.header-menubar {
+        position: relative;
         top: 0;
         right: 0;
         height: 100%;
         padding-top: 0.5em;
-        padding-right: 1.5em;
-    }
-    .header-menubar , ul .header-menubar ul { 
-        display: block;
+        padding-right: 0em;
+    }*/
+    .header-menubar , .header-menubar ul, .header-menubar ul li { 
+        display:flex;
+        flex-direction: column;
         text-align: right;
         list-style: none;
-        font-size: small;
+        font-size:medium;
     }
-    main>div {
+    main>section {
         display: block;
         width: 100%;
     }
 }
-
 .header-menubar {
     margin: 0 0 0 0;
     /*border: solid turquoise;*/
@@ -138,7 +140,7 @@ footer {
     position: relative;
     top: auto;
     width: auto;
-    display: inline;
+    display: inline-block;
 }
 
 .header-menubar ul li { 
@@ -165,8 +167,9 @@ footer {
 }
 
 .contenido-principal {
+    padding: 10px;
     display:grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(1 auto 1fr);
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     align-items:center;
@@ -174,17 +177,18 @@ footer {
     /*background-color: black;*/
 }
 section>div {
-    display: flex;
+    grid-template-rows: subgrid;
     flex-direction: column;
     /*background-color: aqua;*/
     align-items:center;
 }
-.cuatro {
+.cuatro,.uno , .dos, .tres {
     display:flex;
     flex-direction: column;
     align-items:center;
 }
 section>div>p {
+    font-family: 'Gowun Dodum', sans-serif;
     text-align: justify;
     margin: 10px;
     max-width: 400px;

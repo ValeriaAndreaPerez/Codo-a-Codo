@@ -10,31 +10,30 @@ html{
 
 body {
     /*border: 3px red solid;*/
-    min-height: 100vh;
-    margin: 0;
-    min-width: 100vh;
-    padding: 0px;
+    min-height: 50px;
+    margin-top: 0px;
+    min-width: 50px;
+    padding: 0;
 }
-
 main {
     margin-top: 100px;
+
 }
 header {
     position: fixed;
-    top: 0;
+    top:0;
     width: 100%;
     background-color: #b6d8c0;
     font-family: 'Kaisei HarunoUmi', serif;
     box-shadow: 5px 5px 20px #b6d8c0 ;
     border-radius: 3px;
+    display: flex;
 }
 .container {
-    display:flex;
-    place-content: space-between;
+    display: inline-flex;
+    flex-direction: row;
 }
-
-
-footer {
+ footer {
     /*border: 3px blue solid;*/
     text-align: center;
     width: 100%;
@@ -54,13 +53,10 @@ footer {
 }
 .header-logo {
     /*border: 3px black solid;*/
-    margin: 0;
-    padding:0;
+    /*margin: 0.5rem;*/
+    display: inline-flex;
 }
-.header-logo a {
-    padding: 0;
-}
-#menu , #menu-check {
+#menu ,  #menu-check {
     display: none;
 }
 
@@ -68,11 +64,11 @@ footer {
     header, .header-menubar,.header-menubar ul, .header-menubar li {
         display:flex;
     }
-    header div.container nav {
-        display: flex;
-        place-content: space-between;
-    }
-   
+    .header-menubar ul li{
+    width: 100%;
+    align-items: center;
+    display:inline-flex;
+     }
     #menu {
         display: none;
     }
@@ -112,40 +108,35 @@ footer {
     #menu-cerrar {
             display: none;
         }
+
     #menu-check:checked ~ label #menu-abrir {
     display: none;
     }
     #menu-check:checked ~ label #menu-cerrar {
     display: block
     }
-    /*.header-menubar {
-        position: relative;
-        top: 0;
-        right: 0;
-        height: 100%;
-        padding-top: 0.5em;
-        padding-right: 0em;
-    }*/
-    .header-menubar , .header-menubar ul, .header-menubar ul li { 
-        display:flex;
+   
+    .header-menubar ,.header-menubar ul, .header-menubar ul li { 
+        display: flex;
         flex-direction: column;
         text-align: right;
         list-style: none;
-        font-size:medium;
+        font-size: small;
     }
-    main>section {
+    main, section {
         display: block;
         width: 100%;
     }
 }
+
 .header-menubar {
     margin: 0 0 0 0;
     /*border: solid turquoise;*/
-    left: 10px;
     position: relative;
+    left: 50px;
     top: auto;
     width: auto;
-    display: inline-block;
+    display: block;
 }
 
 .header-menubar ul li { 
@@ -159,7 +150,7 @@ footer {
     font-size: 18px;;
     font-weight: 700;
     /*text-align: center;*/
-    margin: 20px 100px 0px 0px;
+    margin: 10px 100px 10px 10px;
     padding: 0;
     align-items: center;
 }
@@ -170,54 +161,49 @@ footer {
 .header-menubar a:hover {
     color: #DA8 
 }
+main {
+    background-color: #ffff;
+    min-height: 200px;
+    overflow: auto;
+}
+main div {
+    /*border: 3px blue solid;*/
+    min-height: 180px;
+    margin: auto;
+    height: auto;
+    width: 85%;
+}
 
-.contenido-principal {
-    padding: 10px;
-    display:grid;
-    grid-template-rows: repeat(1 auto 1fr);
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    align-items:center;
-    text-align:justify;
-    /*background-color: black;*/
+.secciones {
+    /*border: 2px green solid;*/
+    min-height: 50px;
+    margin: 0.5rem;
+    top:10px
 }
-section>div {
-    grid-template-rows: subgrid;
-    flex-direction: column;
-    /*background-color: aqua;*/
-    align-items:center;
-}
-.cuatro,.uno , .dos, .tres {
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-}
-section>div>p {
-    font-family: 'Gowun Dodum', sans-serif;
+.primer-art .segundo-art {
+    /*border: 2px purple solid;*/
+    /*margin: 0.5rem;*/
+    padding-top: 10px;
+    margin-top: 100px;
+    font-family:'Gowun Dodum', sans-serif;
     text-align: justify;
-    margin: 10px;
-    max-width: 400px;
-    max-height: 400px;
 }
-#sala, #manos, #masaje {
-    max-width: 400px;
-    max-height: 400px;
+
+body {
+    background-color: #dadabd;
+}
+#aceite {
+    width: 100%;
+    border-radius: 15px;
+}
+#promociones {
+    width: 85%;
     border-radius: 15px;
 }
 
-button {
-    border-radius:3px;
-    border: 0;
-    box-shadow: 1px 1px 1px gray;
-    font-family:'Kaisei HarunoUmi', serif;
-    font-size: 16px;
-    background: #ecdbbc;
-}
-button:hover {
-    background:#b6d8c0
-}
+
 /*color1 { #b6d8c0 };
 .color2 { #c8d9bf };
 .color3 { #dadabd };
 .color4 { #ecdbbc };
-.color5 { #fedcba }  #DA8;*/
+.color5 { #fedcba }  #DA8;*

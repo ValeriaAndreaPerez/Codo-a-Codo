@@ -16,8 +16,7 @@ body {
     padding: 0;
 }
 main {
-    margin-top: 100px;
-
+    margin-top: 90px;
 }
 header {
     position: fixed;
@@ -68,7 +67,7 @@ header {
     width: 100%;
     align-items: center;
     display:inline-flex;
-     }
+    }
     #menu {
         display: none;
     }
@@ -161,43 +160,59 @@ header {
 .header-menubar a:hover {
     color: #DA8 
 }
-main {
-    background-color: #ffff;
-    min-height: 200px;
-    overflow: auto;
-}
-main div {
-    /*border: 3px blue solid;*/
-    min-height: 180px;
-    margin: auto;
-    height: auto;
-    width: 85%;
-}
 
-.secciones {
-    /*border: 2px green solid;*/
-    min-height: 50px;
-    margin: 0.5rem;
-    top:10px
+main div {
+    display: block;
+    min-height: 100px;
+    width: auto;
+    height: auto;
+    
 }
-.primer-art .segundo-art {
-    /*border: 2px purple solid;*/
-    /*margin: 0.5rem;*/
-    padding-top: 10px;
-    margin-top: 100px;
+.contenido-principal {
+    display: block;
+}
+section {
+    display: block;
+   
+}
+article {
+    display: block;
+    text-align: center;
+    align-items: center;
+    max-width: auto;
+    max-height: auto;
+}
+.primer-art,.segundo-art,.tercer-art {
+    padding: 10px;
+    font-family:'Gowun Dodum', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+  
+}
+.segundo-art,.tercer-art {
+    display: inline-block;
+    max-width:400px;
+    max-height: auto;
+    margin-left: 20px;
     font-family:'Gowun Dodum', sans-serif;
     text-align: justify;
+    font-size: 18px;
+    @keyfrem animate__heartBeat
 }
-
 body {
-    background-color: #dadabd;
+    background-color: #ecdbbc;
 }
-#aceite {
+#bienvenida {
     width: 100%;
     border-radius: 15px;
 }
+
 #promociones {
-    width: 85%;
+    width: 80%;
+    border-radius: 15px;
+}
+#deportivo {
+    width: 100%;
     border-radius: 15px;
 }
 

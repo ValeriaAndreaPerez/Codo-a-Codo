@@ -50,6 +50,7 @@ header {
     /*border: 3px black solid;*/
     /*margin: 0.5rem;*/
     display: inline-flex;
+    padding: 0;
 }
 #menu ,  #menu-check {
     display: none;
@@ -123,7 +124,7 @@ header {
         flex-direction: column;
         text-align: right;
         list-style: none;
-        font-size: small;
+        font-size: medium;
     }
     main>section {
         display: block;
@@ -149,7 +150,7 @@ header {
 .header-menubar li {
     /*border:3px green solid;*/
     float:inline;
-    font-size: 18px;;
+    font-size: 18px;
     font-weight: 700;
     /*text-align: center;*/
     margin: 20px 100px 0px 0px;

@@ -31,6 +31,7 @@ header {
 .container {
     display: inline-flex;
     flex-direction: row;
+    align-items: flex-start;
 }
  footer {
     /*border: 3px blue solid;*/
@@ -60,10 +61,10 @@ header {
 }
 
 @media only screen and (max-widht:1000px) {
-    header, .header-menubar,.header-menubar ul, .header-menubar li {
+    header, .header-menubar,.header-menubar ul, .header-menubar ul li {
         display:flex;
     }
-    .header-menubar ul li{
+    .header-menubar {
     width: 100%;
     align-items: center;
     display:inline-flex;
@@ -120,7 +121,7 @@ header {
         flex-direction: column;
         text-align: right;
         list-style: none;
-        font-size: small;
+        font-size: medium;
     }
     main, section {
         display: block;
@@ -132,7 +133,7 @@ header {
     margin: 0 0 0 0;
     /*border: solid turquoise;*/
     position: relative;
-    left: 50px;
+    left: 20px;
     top: auto;
     width: auto;
     display: block;
@@ -140,15 +141,12 @@ header {
 
 .header-menubar ul li { 
     display: inline-flex;
-    /*text-align:right;*/
     list-style: none;
 }
 .header-menubar li {
     /*border:3px green solid;*/
-    float:inline;
     font-size: 18px;;
     font-weight: 700;
-    /*text-align: center;*/
     margin: 10px 100px 10px 10px;
     padding: 0;
     align-items: center;
@@ -197,7 +195,7 @@ article {
     font-family:'Gowun Dodum', sans-serif;
     text-align: justify;
     font-size: 18px;
-    @keyfrem animate__heartBeat
+
 }
 body {
     background-color: #ecdbbc;

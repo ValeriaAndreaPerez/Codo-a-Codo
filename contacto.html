@@ -37,28 +37,28 @@
         </div>
     </header>
   <main>
-  <section class="Formulario">
+  <section class="Contacto">
         <div class="container-fluid">    
-            <form class="row g-3" action="validacion.html" onsubmit="return validacion();">
+            <form class="row g-3" action= "" name="formulario" method="get">
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4"><label id="mensaje"></label><br>
+              <input type="email" class="form-control" name="email"><label id="alert"></label><br>
             </div>
             <div class="col-md-6">
               <label for="inputNombre" class="form-label">Nombre</label>
-              <input type="nombre" class="form-control" id="inputNombre" required minlength="3"><label id="mensaje2"></label><br>
+              <input type="nombre" class="form-control" name="nombre1"><label id="alert"></label><br>
             </div>
             <div class="col-12">
               <label for="inputNombre" class="form-label">Apellido</label>
-              <input type="nombre" class="form-control" id="inputNombre" required minlength="3"><label id="mensaje2"></label><br>
+              <input type="nombre" class="form-control" name="nombre2"><label id="alert"></label><br>
             </div>
             <div class="col-12">
-              <label for="inputAddress2" class="form-label">Profesional</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="de preferencia">
+              <label for="inputProf" class="form-label">Profesional</label>
+              <input type="text" class="form-control" id="nombre3" placeholder="de preferencia">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-2">
               <label for="inputhour" class="form-label">Horario</label>
-              <input type="number" class="form-control" id="inputhour" min="8" max="21">
+              <input type="number" class="form-control" id="hora" min="8" max="21">
             </div>
             <div class="col-md-4">
               <label for="inputState" class="form-label">Tratamiento</label>
@@ -70,44 +70,44 @@
                 <option>Deportivos</option>
               </select>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
               <label for="inputZip" class="form-label">Mensaje</label>
-              <input type="text" class="form-control" id="inputZip">
+              <input type="text" class="form-control" id="mensaje">
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary">Consultar</button><label id="mensaje2"></label><br>
-            </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
           
           </form> 
-          <script type='text/javascript'>
+          <script>
   
-            function validacion () {
-          
-                valor = document.getElementById("inputEmail4").value;
-                valor2 = document.getElementById("inputNombre").value;
-              
+            (function(){
+            var formulario = document.getElementsByName('formulario')[0],
+                elementos = formulario.elements,
+                boton = document.getElementsByClassName('btn btn-primary');
             
-                if (valor == null || valor.length == 0) 
-                {
-                    document.getElementById('mensaje').innerHTML = "Por favor, completar los datos";  
-                    elemento = document.getElementById('inputEmail4');
-                    elemento.focus();
-                    return false;
-            
+            var validarEmail = function(e){
+                if (formulario.email.value == 0){
+                    alert("Completa el campo email");
+                    e.preventDefault();
                 }
-                return true;
-              
-                if (valor2 == null || valor2.length == 0) 
-                {
-                    document.getElementById('mensaje2').innerHTML = "Por favor, completar los datos";  
-                    elemento2 = document.getElementById('inputNombre');
-                    elemento2.focus();
-                    return false;
-            
+            };
+
+            var validarNombre = function(e) {
+              if (formulario.nombre1.value == 0 || formulario.nombre2.value ==0 || formulario.nombre3.value ==0 || formulario.hora.value ==0 || formulario.mensaje.value ==0)
+              {
+                  alert("Completa los campos");
+                  e.preventDefault();
                 }
-                return true;
+              else { alert ("Gracias por su contacto, nos comunicaremos a la brevedad") }
+            };
             
-            }
+            var validar = function(e){
+              validarEmail(e);
+              validarNombre(e);
+            };
+            formulario.addEventListener("submit",validar);  
+            
+            }())     
             
           </script>
     </div>
